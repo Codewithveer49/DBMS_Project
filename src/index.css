@@ -2,69 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/* MediChain Healthcare Design System - All colors, gradients, fonts, etc defined here. 
-Medical theme with soft blues, healing greens, and clean whites for trust and professionalism.
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Core Background Colors */
-    --background: 248 250 252; /* slate-50 */
-    --foreground: 219 39% 11%; /* slate-800 */
-
-    /* Card and Surface Colors */
-    --card: 0 0% 100%; /* white */
-    --card-foreground: 219 39% 11%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 219 39% 11%;
-
-    /* Medical Primary - Trustworthy Blue */
-    --primary: 207 89% 54%; /* sky-500 */
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 213 93% 67%; /* sky-400 */
-    --primary-dark: 211 96% 48%; /* sky-600 */
-
-    /* Medical Secondary - Healing Green */
-    --secondary: 160 84% 39%; /* emerald-600 */
-    --secondary-foreground: 0 0% 100%;
-    --secondary-light: 165 85% 57%; /* emerald-500 */
-
-    /* Neutral Grays */
-    --muted: 220 13% 96%; /* slate-100 */
-    --muted-foreground: 220 9% 46%; /* slate-500 */
-
-    --accent: 213 27% 84%; /* slate-200 */
-    --accent-foreground: 219 39% 11%;
-
-    /* Status Colors */
-    --destructive: 0 84% 60%; /* red-500 */
-    --destructive-foreground: 0 0% 100%;
+    /* Modern dark theme inspired by stake.com and apple.com */
+    --background: 0 0% 2%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 47 100% 50%;
+    --primary-foreground: 0 0% 2%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 85%;
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 47 100% 50%;
+    --radius: 0.5rem;
     
-    --success: 160 84% 39%; /* emerald-600 */
-    --success-foreground: 0 0% 100%;
+    /* Premium theme colors */
+    --premium-gold: 47 100% 50%;
+    --premium-silver: 0 0% 75%;
+    --premium-dark: 0 0% 8%;
+    --premium-darker: 0 0% 4%;
+    --premium-accent: 220 100% 60%;
     
-    --warning: 43 96% 56%; /* yellow-400 */
-    --warning-foreground: 0 0% 0%;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(47 100% 50%), hsl(45 100% 45%));
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 4%), hsl(0 0% 8%));
+    --gradient-accent: linear-gradient(135deg, hsl(220 100% 60%), hsl(240 100% 70%));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 16px -4px hsl(0 0% 0% / 0.4);
+    --shadow-hard: 0 8px 32px -8px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 20px hsl(47 100% 50% / 0.3);
 
-    /* Interface Elements */
-    --border: 220 13% 91%; /* slate-200 */
-    --input: 220 13% 91%;
-    --ring: 207 89% 54%; /* matches primary */
-
-    /* Medical Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(207 89% 54%), hsl(213 93% 67%));
-    --gradient-secondary: linear-gradient(135deg, hsl(160 84% 39%), hsl(165 85% 57%));
-    --gradient-hero: linear-gradient(135deg, hsl(207 89% 54%) 0%, hsl(160 84% 39%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 13% 98%) 100%);
-
-    /* Shadows for depth */
-    --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
-    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
-    --shadow-large: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
-
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
 

@@ -88,26 +88,32 @@ export function AppSidebar() {
           
           <div className="my-4 border-t" />
           
-          <SidebarNavItem
-            collapsed={collapsed}
-            icon={<User className="h-4 w-4" />}
-            label="Profile"
-            className="cursor-pointer"
-          />
+          <NavLink to={isPatient ? "/patient/profile" : "/doctor/profile"} className="block">
+            <SidebarNavItem
+              collapsed={collapsed}
+              icon={<User className="h-4 w-4" />}
+              label="Profile"
+              isActive={currentPath === (isPatient ? "/patient/profile" : "/doctor/profile")}
+            />
+          </NavLink>
           
-          <SidebarNavItem
-            collapsed={collapsed}
-            icon={<Settings className="h-4 w-4" />}
-            label="Settings"
-            className="cursor-pointer"
-          />
+          <NavLink to={isPatient ? "/patient/settings" : "/doctor/settings"} className="block">
+            <SidebarNavItem
+              collapsed={collapsed}
+              icon={<Settings className="h-4 w-4" />}
+              label="Settings"
+              isActive={currentPath === (isPatient ? "/patient/settings" : "/doctor/settings")}
+            />
+          </NavLink>
           
-          <SidebarNavItem
-            collapsed={collapsed}
-            icon={<LogOut className="h-4 w-4" />}
-            label="Logout"
-            className="cursor-pointer text-destructive hover:bg-destructive/10"
-          />
+          <NavLink to="/" className="block">
+            <SidebarNavItem
+              collapsed={collapsed}
+              icon={<LogOut className="h-4 w-4" />}
+              label="Logout"
+              className="text-destructive hover:bg-destructive/10"
+            />
+          </NavLink>
         </SidebarNav>
       </SidebarContent>
     </Sidebar>

@@ -8,6 +8,19 @@ import PatientAuth from "./pages/auth/PatientAuth";
 import DoctorAuth from "./pages/auth/DoctorAuth";
 import PatientDashboard from "./pages/patient/PatientDashboard";
 import ConsentManager from "./pages/patient/ConsentManager";
+import MedicalHistory from "./pages/patient/MedicalHistory";
+import Prescriptions from "./pages/patient/Prescriptions";
+import Appointments from "./pages/patient/Appointments";
+import AuditLogs from "./pages/patient/AuditLogs";
+import PatientProfile from "./pages/patient/PatientProfile";
+import PatientSettings from "./pages/patient/PatientSettings";
+import DoctorDashboard from "./pages/doctor/DoctorDashboard";
+import Patients from "./pages/doctor/Patients";
+import Records from "./pages/doctor/Records";
+import DoctorPrescriptions from "./pages/doctor/DoctorPrescriptions";
+import DoctorAppointments from "./pages/doctor/DoctorAppointments";
+import DoctorProfile from "./pages/doctor/DoctorProfile";
+import DoctorSettings from "./pages/doctor/DoctorSettings";
 import { AppLayout } from "./components/layout/AppLayout";
 import NotFound from "./pages/NotFound";
 
@@ -29,18 +42,22 @@ const App = () => (
           <Route path="/patient" element={<AppLayout />}>
             <Route index element={<PatientDashboard />} />
             <Route path="consent" element={<ConsentManager />} />
-            <Route path="history" element={<div className="p-6">Medical History Page</div>} />
-            <Route path="prescriptions" element={<div className="p-6">Prescriptions Page</div>} />
-            <Route path="appointments" element={<div className="p-6">Appointments Page</div>} />
-            <Route path="audit" element={<div className="p-6">Audit Logs Page</div>} />
+            <Route path="history" element={<MedicalHistory />} />
+            <Route path="prescriptions" element={<Prescriptions />} />
+            <Route path="appointments" element={<Appointments />} />
+            <Route path="audit" element={<AuditLogs />} />
+            <Route path="profile" element={<PatientProfile />} />
+            <Route path="settings" element={<PatientSettings />} />
           </Route>
           
           <Route path="/doctor" element={<AppLayout />}>
-            <Route index element={<div className="p-6">Doctor Dashboard</div>} />
-            <Route path="patients" element={<div className="p-6">Patients Page</div>} />
-            <Route path="records" element={<div className="p-6">Records Page</div>} />
-            <Route path="prescriptions" element={<div className="p-6">Doctor Prescriptions Page</div>} />
-            <Route path="appointments" element={<div className="p-6">Doctor Appointments Page</div>} />
+            <Route index element={<DoctorDashboard />} />
+            <Route path="patients" element={<Patients />} />
+            <Route path="records" element={<Records />} />
+            <Route path="prescriptions" element={<DoctorPrescriptions />} />
+            <Route path="appointments" element={<DoctorAppointments />} />
+            <Route path="profile" element={<DoctorProfile />} />
+            <Route path="settings" element={<DoctorSettings />} />
           </Route>
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
