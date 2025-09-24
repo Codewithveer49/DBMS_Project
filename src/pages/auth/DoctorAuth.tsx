@@ -34,7 +34,7 @@ export default function DoctorAuth() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-secondary flex items-center justify-center p-4">
+    <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export default function DoctorAuth() {
         </div>
 
         <Card className="bg-white/95 backdrop-blur-sm shadow-large border-0">
-          <CardHeader className="text-center space-y-4">
+          <CardHeader className="text-center space-y-4 bg-black">
             <div className="flex justify-center">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-secondary">
                 <Stethoscope className="h-6 w-6 text-white" />
@@ -62,7 +62,7 @@ export default function DoctorAuth() {
             </div>
           </CardHeader>
 
-          <CardContent>
+          <CardContent className="bg-black">
             <Tabs defaultValue="login" className="space-y-6">
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="login">Login</TabsTrigger>

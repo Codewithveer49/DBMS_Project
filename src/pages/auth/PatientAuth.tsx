@@ -46,7 +46,7 @@ export default function PatientAuth() {
           </Link>
         </div>
 
-        <Card className="bg-white/95 backdrop-blur-sm shadow-large border-0">
+        <Card className="bg-black/95 backdrop-blur-sm shadow-large border-0">
           <CardHeader className="text-center space-y-4">
             <div className="flex justify-center">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-primary">
@@ -61,7 +61,7 @@ export default function PatientAuth() {
             </div>
           </CardHeader>
 
-          <CardContent>
+          <CardContent className="bg-black">
             <Tabs defaultValue="login" className="space-y-6">
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="login">Login</TabsTrigger>
