@@ -81,8 +81,6 @@ export default function DoctorDashboard() {
             ))}
           </CardContent>
         </Card>
-
-        {/* Recent Records */}
         <Card className="border border-border bg-card">
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle className="flex items-center gap-2">
